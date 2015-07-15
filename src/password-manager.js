@@ -214,8 +214,7 @@ var keychain = function() {
           throw "Swap Attack detected!";
         }
     
-      return string_from_padded_bitarray(passwordCandidate, MAX_PW_LEN_BYTES);
-
+      
     } else {
       return null;
     }
