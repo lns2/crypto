@@ -102,7 +102,8 @@ var keychain = function() {
     * Return Type: boolean
     */
   keychain.load = function(password, repr, trusted_data_check) {
-
+    ready = false; //Só é modificado se chegar ao final da função.
+    
     if (trusted_data_check !== undefined) {
       var repr_sha = SHA256(string_to_bitarray(repr));
       var check = bitarray_equal(repr_sha, trusted_data_check);
